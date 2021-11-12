@@ -13,21 +13,20 @@ import colors from "../theme/colors";
 
 const { height } = Dimensions.get("screen");
 
-const RegisterScreen = () => {
+const LoginScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.logoWrapper}>
         <Image source={require("../../assets/logo/Logo.png")} />
       </View>
 
-      <View style={{ alignItems: "center", flexGrow: 1 }}>
+      <View style={{ alignItems: "center" }}>
         <InputBox icon="email" placeholder="Email Address" />
-        <InputBox icon="cellphone" placeholder="Phone Number" />
         <InputBox icon="lock" placeholder="Password" secureTextEntry />
-        <PrimaryButton text="Create an account" style={{ marginTop: 20 }} />
+        <PrimaryButton text="Sign In" style={{ marginTop: 20 }} />
 
         <TouchableWithoutFeedback>
-          <Text style={styles.alreadyBtn}>Already have an account?</Text>
+          <Text style={styles.alreadyBtn}>Don't have an account?</Text>
         </TouchableWithoutFeedback>
       </View>
     </View>
@@ -42,10 +41,10 @@ const styles = StyleSheet.create({
   },
   alreadyBtn: {
     fontSize: 14,
-    marginTop: 20,
     textAlign: "center",
     color: colors.primary,
     fontFamily: "PoppinsSemiBold",
+    marginTop: 20,
   },
   logoWrapper: {
     height: height * 0.4,
@@ -54,4 +53,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RegisterScreen;
+export default LoginScreen;

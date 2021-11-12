@@ -1,9 +1,8 @@
 import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet } from "react-native";
 import ScreenView from "./app/components/ScreenView";
-import RegisterScreen from "./app/screens/RegisterScreen";
+import HomeScreen from "./app/screens/HomeScreen";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -20,14 +19,8 @@ export default function App() {
 
   return (
     <ScreenView>
-      <RegisterScreen />
+      <HomeScreen />
       <StatusBar style="auto" />
     </ScreenView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
